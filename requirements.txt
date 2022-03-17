@@ -1,1 +1,1 @@
-xgboost
+git+https://github.com/RafiKurlansik/project_test.git
