@@ -33,3 +33,6 @@ def convert_csv_to_delta(path, col_types, table_name):
 
 def squared (x):
   return x**2
+
+def add (a, b):
+  return a + b
