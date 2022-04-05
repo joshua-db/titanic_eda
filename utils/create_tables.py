@@ -23,16 +23,10 @@ def convert_csv_to_delta(path, col_types, table_name):
   def write_to_delta(spark_df, delta_table_name):
     spark_df.write.mode('overwrite').format('delta').saveAsTable(delta_table_name)
     
-  write_to_delta(pdf, table_name)
+  write_to_delta(pdf, table)
   
   out = f"""The following tables were created:
           - {table_name}
        """
   
   print(out)
-
-def squared (x):
-  return x**2
-
-def add (a, b):
-  return a + b
