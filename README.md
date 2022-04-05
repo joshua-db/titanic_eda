@@ -1,17 +1,23 @@
 # Exploratory Data Analysis with Databricks
 
-In this demo you are tasked with analyzing the [Titanic Dataset](https://www.kaggle.com/c/titanic).  To do so we will highlight some of the latest features for developing within Databricks using Repos and Notebooks.  In particular, we will demonstrate how to:
+**Table of Contents:**<br>
+I. [Introduction](#introduction)<br>
+II. [Demo Script](#demo-script)<br>
+III. [Data Dictionary](#data-dictionary)
+
+### Introduction
+In this demo we analyze the [Titanic Dataset](https://www.kaggle.com/c/titanic) with some of the latest features for Repos and Notebooks in Databricks.  In particular, we will demonstrate how to:
 
 
 * Use Repos and Files to iterate on modular code
 * Use Data Profiles and DBSQL Visualizations in the Databricks Notebook
-* Use bamboolib to clean a dataset and uncover relationships between variables
+* Use `bamboolib` to clean a dataset and uncover relationships between variables
 * Share our discoveries!
 
 
-We’re going to do all of that and we’re going to do it quickly.  This demo should only take about 10-15 minutes, and if you are just showing bamboolib, 5-10 minutes. The steps are spelled out in detail, and you can find a video here soon, but feel free to riff on the theme and modify it to suit your needs.
+We’re going to do all of that and we’re going to do it quickly.  This demo should only take about 10-15 minutes, and if you are just showing `bamboolib`, 5-10 minutes. The steps are spelled out in detail, and you can find a video here soon, but feel free to riff on the theme and modify it to suit your needs.
 
-#### Introduction
+### Demo Script
  You’ve been tasked with analyzing the Titanic dataset and have been pointed to a git repo with some pre-work already done for you by a teammate.  Open up Databricks and finish the initial round of data exploration.
  
 1. **Highlight: Repos + Files**
@@ -34,9 +40,9 @@ We’re going to do all of that and we’re going to do it quickly.  This demo s
    - Adjust the size so that the output renders clearly    
    - Save the output  
    - Step back and analyze the visualization.  Notice how many NaNs there are and how many different Cabins are on the X-axis.  The visualization is too busy and granular to show a clear signal, so some data wrangling is needed to go any further. 
-3. **Highlight: bamboolib**    
-  a. Install bamboolib and import it as bam.  Note, you might need to run the import cell twice to get it to render.  This will be ironed out prior to GA.    
-  b. Use bamboolib to further analyze and wrangle data
+3. **Highlight: `bamboolib`**    
+  a. Install `bamboolib` and import it as bam.  Note, you might need to run the import cell twice to get it to render.  This will be ironed out prior to GA.    
+  b. Use `bamboolib` to further analyze and wrangle data
    - Choose ‘Databricks: load database table’ , enter ‘titanic’ as the table name, then execute
    - After noting the data table, click on ‘Explore Dataframe’
      * Notice how we see missing values in Age (about 20%), but not in Cabin!
@@ -55,7 +61,7 @@ We’re going to do all of that and we’re going to do it quickly.  This demo s
      * Use ‘Select or drop columns’ to subset Survived, Sex, Age, Fare and Cabin_0
      * Drop all missing values
      * The resulting set should contain 185 rows and 5 columns
-  c. Use bamboolib to visualize data
+  c. Use `bamboolib` to visualize data
    - Click on Create plot
      * Choose Scatter plot as the figure type
      * Y-axis: Age
@@ -64,7 +70,7 @@ We’re going to do all of that and we’re going to do it quickly.  This demo s
      * Size: Fare
      * Facet column: Sex
    - This plot should very clearly illustrate that women in the similar cabin classes experience much higher survival rates
-  d. Use bamboolib to generate and share code
+  d. Use `bamboolib` to generate and share code
    - Click on the Data tab and copy the code into a new code cell
    - Add a single line to the generated output: display(df)
    - Click on the Plot creator tab and copy the code into another new code cell
@@ -72,7 +78,7 @@ We’re going to do all of that and we’re going to do it quickly.  This demo s
 4. **Highlight: Sharing**    
   a. Run both cells with the generated code    
   b. Click on the ‘View’ tab in the notebook  and create a new dashboard    
-  c. Arrange the elements to show the data table, the data profile, the DBSQL viz and the plotly viz from bamboolib    
+  c. Arrange the elements to show the data table, the data profile, the DBSQL viz and the plotly viz from `bamboolib`   
   d. When you are done, present the dashboard     
   e. Come back to the dashboard editor or notebook, click on the share button and share it with someone. Note that they can be notified via email    
 
@@ -80,11 +86,11 @@ We’re going to do all of that and we’re going to do it quickly.  This demo s
 The work isn’t over, but you have discovered some important initial findings about who survived the Titanic and communicated them with your stakeholders.  What will you discover in your next iteration?    
 
 
-### Data Source
+### Data Dictionary
 
 From: [Kaggle](https://www.kaggle.com/c/titanic/data)
 
-#### Data Dictionary
+
 | Variable | Definition                                 | Key                                            |   |   |
 |----------|--------------------------------------------|------------------------------------------------|---|---|
 | survival | Survival                                   | 0 = No, 1 = Yes                                |   |   |
