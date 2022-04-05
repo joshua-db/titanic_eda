@@ -146,4 +146,10 @@ fig
 
 # COMMAND ----------
 
+# MAGIC %md
+# MAGIC ### Clean up tables
 
+# COMMAND ----------
+
+from utils import cleanup
+cleanup.drop_tables()
