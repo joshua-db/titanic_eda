@@ -28,8 +28,8 @@ We’re going to do all of that and we’re going to do it quickly.  This demo s
     d. Navigate to create_tables.py and use the file editor search capability to look up ‘table’. Correct line 26 to read ‘table_name’ instead of simply ‘table’.    
     e. Make sure the results are saved and return to the EDA notebook
 2. **Highlight: Data Profiles and DBSQL Visualizations**  
-  a. Create the view of the titanic dataset by joining the three datasets, then run the select * to begin exploring the data
-  b. Take a brief moment to look at the data table, then move on to the Data Profile
+  a. Create the view of the titanic dataset by joining the three datasets, then run the select * to begin exploring the data    
+  b. Take a brief moment to look at the data table, then move on to the Data Profile.   
   c. Point out the distribution of values for Sex, Age, and Survived.      
   d. Notice the number of NaNs in the Cabin column    
   e. Create a new ‘Bubble Chart’ DBSQL visualization
