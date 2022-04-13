@@ -60,8 +60,8 @@ We’re going to do all of that and we’re going to do it quickly.  This demo s
      * Use ‘Split text column’ on ‘Cabin’.  Check the regex box and use [0-9] as the separator
      * Use ‘Select or drop columns’ to subset Survived, Sex, Age, Fare and Cabin_0
      * Drop all missing values
-     * The resulting set should contain 185 rows and 5 columns
-  c. Use `bamboolib` to visualize data
+     * The resulting set should contain 185 rows and 5 columns    
+  c. Use `bamboolib` to visualize data   
    - Click on Create plot
      * Choose Scatter plot as the figure type
      * Y-axis: Age
@@ -69,8 +69,8 @@ We’re going to do all of that and we’re going to do it quickly.  This demo s
      * Color: Survived
      * Size: Fare
      * Facet column: Sex
-   - This plot should very clearly illustrate that women in the similar cabin classes experience much higher survival rates
-  d. Use `bamboolib` to generate and share code
+   - This plot should very clearly illustrate that women in the similar cabin classes experience much higher survival rates    
+  d. Use `bamboolib` to generate and share code    
    - Click on the Data tab and copy the code into a new code cell
    - Add a single line to the generated output: display(df)
    - Click on the Plot creator tab and copy the code into another new code cell
