@@ -108,41 +108,13 @@ create_tables.convert_csv_to_delta(path="./data/passenger_labels.csv",
 
 # COMMAND ----------
 
-# MAGIC %pip install bamboolib==1.30.0j
+# MAGIC %pip install bamboolib
 
 # COMMAND ----------
 
 import bamboolib as bam
 
 bam
-
-# COMMAND ----------
-
-df = spark.table("titanic").limit(100000).toPandas()
-# Step: Replace NaN with missing value in 'Cabin'
-df['Cabin'] = df['Cabin'].replace('NaN', np.nan)
-
-# Step: Drop missing values in ['Cabin']
-df = df.dropna(subset=['Cabin'])
-
-# Step: Manipulate strings of 'Cabin' and perform a split on '[0-9]'
-split_df = df['Cabin'].str.split('[0-9]', expand=True)
-split_df.columns = ['Cabin' + f"_{id_}" for id_ in range(len(split_df.columns))]
-df = pd.merge(df, split_df, how="left", left_index=True, right_index=True)
-
-# Step: Select columns
-df = df[['Fare', 'Sex', 'Survived', 'Age', 'Cabin_0']]
-
-# Step: Drop missing values in [All columns]
-df = df.dropna()
-
-display(df)
-
-# COMMAND ----------
-
-import plotly.express as px
-fig = px.scatter(titanic_clean.dropna(subset=['Age']), x='Cabin_0', y='Age', color='Survived', size='Fare', facet_col='Sex')
-fig
 
 # COMMAND ----------
 
